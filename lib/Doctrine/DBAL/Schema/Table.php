@@ -293,7 +293,7 @@ class Table extends AbstractAsset
     private function _createIndex(array $columnNames, $indexName, $isUnique, $isPrimary, array $flags = array(), array $options = array())
     {
         if (preg_match('(([^a-zA-Z0-9_]+))', $this->normalizeIdentifier($indexName))) {
-            throw SchemaException::indexNameInvalid($indexName);
+            //throw SchemaException::indexNameInvalid($indexName);
         }
 
         foreach ($columnNames as $columnName => $indexColOptions) {
